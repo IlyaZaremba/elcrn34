@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+	<div>
+        <h2>Нажмите на карту для выбора координат</h2>
+	</div>
+	<div id="mapid"></div>
+	<script type="text/javascript" src="{% static 'coordinate_saver/js/coordinate_saver_listener.js' %}"></script>
+	<a href="{% url 'saved_coordinates' %}">
+	<h2>
+	<button name="button">Сохранить координаты</button>
+	</h2>
+	</a>
+{% endblock %}

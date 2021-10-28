@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Сохраненные координаты:</h1>
+    {% if pointer_list %}
+        <div>
+            {% for pointer in pointer_list %}
+                <div> ({{pointer.coordinate.x}} , {{pointer.coordinate.y}}) </div>
+            {% endfor %}
+            <a href="{% url 'index' %}">
+                	<button name="button">Вернуться к карте</button>
+            </a>
+        </div>
+
+    {% endif %}
+{% endblock %}
